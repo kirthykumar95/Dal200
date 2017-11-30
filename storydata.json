@@ -1,0 +1,144 @@
+{
+  "categories": {
+    "Canada" : [
+      {
+        "id" : 1,
+        "story": "Canada story1"
+      },
+      {
+        "id" : 2,
+        "story": "Canada story2"
+      },
+      {
+        "id" : 3,
+        "story": "Canada story3"
+      },
+      {
+        "id" : 4,
+        "story": "Canada story4"
+      },
+      {
+        "id" : 5,
+        "story": "Canada story5"
+      },
+      {
+        "id" : 6,
+        "story": "Canada story6"
+      },
+      {
+        "id" : 7,
+        "story": "Canada story7"
+      },
+      {
+        "id" : 8,
+        "story": "Canada story8"
+      },
+      {
+        "id" : 9,
+        "story": "Canada story9"
+      },
+      {
+        "id" : 10,
+        "story": "Canada story10"
+      },
+      {
+        "id" : 11,
+        "story": "Canada story11"
+      }
+
+    ],
+    "International": [
+      {
+        "id" : 100,
+        "story": "International story1"
+      },
+      {
+        "id" : 101,
+        "story": "International story101"
+      },
+      {
+        "id" : 102,
+        "story": "International story102"
+      },
+      {
+        "id" : 103,
+        "story": "International story103"
+      },
+      {
+        "id" : 104,
+        "story": "International story104"
+      },
+      {
+        "id" : 105,
+        "story": "International story105"
+      },
+      {
+        "id" : 106,
+        "story": "International story106"
+      },
+      {
+        "id" : 107,
+        "story": "International story107"
+      },
+      {
+        "id" : 108,
+        "story": "International story108"
+      },
+      {
+        "id" : 109,
+        "story": "International story109"
+      },
+      {
+        "id" : 110,
+        "story": "International story110"
+      }
+
+    ],
+    "Local": [
+      {
+        "id": 1000,
+        "story": "Local story 1000"
+      },
+      {
+        "id": 1001,
+        "story": "Local story 1001"
+      },
+      {
+        "id": 1002,
+        "story": "Local story 1002"
+      },
+      {
+        "id": 1003,
+        "story": "Local story 1003"
+      },
+      {
+        "id": 1004,
+        "story": "Local story 1004"
+      },
+      {
+        "id": 1005,
+        "story": "Local story 1005"
+      },
+      {
+        "id": 1006,
+        "story": "Local story 1006"
+      },
+      {
+        "id": 1007,
+        "story": "Local story 1007"
+      },
+      {
+        "id": 1008,
+        "story": "Local story 1008"
+      },
+      {
+        "id": 1009,
+        "story": "Local story 1009"
+      },
+      {
+        "id": 1010,
+        "story": "Local story 1010"
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+<html>
+<head>
+  <meta chaset = "utf-8" />
+  <title> Dalhousie 200th anniversary exhibit </title>
+  <h1> Dalhousie 200th anniversary exhibit </h1>
+  <script type="text/javascript" src="raphael-2.1.4/raphael-2.1.4/raphael-min.js"></script>
+  <script>
+  var element;
+  var myPath;
+  var animation;
+  var r;
+
+  window.onload = function()
+  {
+      r = Raphael("holder",1250,600);
+      discattr =
+      {
+        fill: "#666",
+        stroke: "none"
+      };
+
+      r.rect(0,0,1250,600);
+
+      function curve(x,y,zx,zy,colour)
+      {
+        var  ax = 1145;
+        var ay = 300;
+        element = r.circle(x,y,5,5).attr({
+        stroke:"none",
+        fill: colour
+        });
+        var path = [["M", x, y], ["L", ax,ay, zx, zy]];
+        myPath = r.path(path).attr({
+          stroke: colour,
+          "stroke-width": 2,
+          "stroke-linecap": "round",
+          "stroke-opacity": 0.2
+        });
+        controls = r.set(
+          r.circle(x, y, 5).attr(discattr), r.circle(ax,ay, 5).attr(discattr));
+      }
+        curve(100,300,100,300,"red");
+        animation = window.setInterval("animate()", 15);
+  };
+
+  var counter = 0;    // a counter that counts animation steps
+  function animate(){
+    if(myPath.getTotalLength() <= counter){   //break as soon as the total length is reached
+      clearInterval(animation);
+      return;
+    }
+    var pos = myPath.getPointAtLength(counter);   //get the position (see Raphael docs)
+    element.attr({cx: pos.x, cy: pos.y, });  //set the circle position
+
+    counter++; // count the step counter one up
+    initialOptions();
+    printCondition();
+  };
+
+  function initialOptions(){
+   //element.animate({cx: 500, cy: 100},1000);
+   element.animate(1000);
+  };
+
+   function removeObject(obj){
+     obj.animate({
+       "opacity" : 0},
+       3000,
+       "linear",
+        function() {this.remove();}
+     );
+     console.log("test");
+   };
+
+  // function removeObject(obj){
+  //     element.animate(obj, 3000, "linear");
+  //     function(this.remove());
+  // };
+
+  function printCondition(){
+  let caption = "";
+      if (element.attr({cx: 100, cy: 300})){
+         caption = r.text(120, 300, 'Welcome to Dal 200th anniversary exhibit');
+        caption.attr({
+            'font-size': '14',
+            'font-family': 'serif'
+          });
+      }
+    // caption.remove();
+    removeObject(caption);
+    console.log("test2");
+
+
+     if(element.attr({cx:200, cy: 300})){
+        element.stop();
+        var options = r.text(200,200,'Please select from the following regions');
+
+       var canada = r.text(300,200,'Canada');
+       var International = r.text(300,300,'International');
+       var NovaScotia = r.text(300,400,'NovaScotia');
+     }
+   };
+
+  </script>
+  </head>
+  <body>
+    <div id = "holder"> </div>
+  </body>
+  </html>
